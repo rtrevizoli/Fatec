@@ -10,7 +10,8 @@ void menu() {
            "C) Raiz do positivo ou quadrado do negativo;\n"
            "D) Quadrado e raiz do numero positivo;\n"
            "E) Par o impar;\n"
-           "F) Maior e diferença;\n");
+           "F) Maior e diferença;\n"
+           "G) Maior e igual;\n");
 }
 
 void ex01() {
@@ -86,6 +87,20 @@ void ex06() {
     }
 }
 
+void ex07() {
+    int n1, n2;
+    printf("Informe dois numeros: ");
+    scanf("%d %d", &n1, &n2);
+
+    if(n1 == n2) {
+        printf("Numeros iguais.");
+    } else if(n1 > n2) {
+        printf("O maior numero e: %d", n1);
+    } else {
+        printf("O maior numero e: %d", n2);
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -109,6 +124,9 @@ int main() {
         break;
     case 'F':
         ex06();
+        break;
+    case 'G':
+        ex07();
         break;
     default:
         printf("Invalid Option!!");
