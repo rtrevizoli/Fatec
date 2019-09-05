@@ -9,7 +9,8 @@ void menu() {
            "B) Menor que 0 ou Raiz do Maior;\n"
            "C) Raiz do positivo ou quadrado do negativo;\n"
            "D) Quadrado e raiz do numero positivo;\n"
-           "E) Par o impar;\n");
+           "E) Par o impar;\n"
+           "F) Maior e diferença;\n");
 }
 
 void ex01() {
@@ -72,6 +73,19 @@ void ex05() {
         printf("O numero %d e Impar.", n);
     }
 }
+
+void ex06() {
+    int n1, n2;
+    printf("Informe dois numeros: ");
+    scanf("%d %d", &n1, &n2);
+
+    if(n1 > n2) {
+        printf("O maior numero e: %d e a diferença de ambos e: %d", n1, n1-n2);
+    } else {
+        printf("O maior numero e: %d e a diferença de ambos e: %d", n2, n2-n1);
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -92,6 +106,9 @@ int main() {
         break;
     case 'E':
         ex05();
+        break;
+    case 'F':
+        ex06();
         break;
     default:
         printf("Invalid Option!!");
