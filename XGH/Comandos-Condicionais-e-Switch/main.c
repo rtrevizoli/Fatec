@@ -7,7 +7,8 @@ void menu() {
     printf("--Options Menu--\n"
            "A) Valida maior, inteiro;\n"
            "B) Menor que 0 ou Raiz do Maior;\n"
-           "C) Raiz do positivo ou quadrado do negativo;\n");
+           "C) Raiz do positivo ou quadrado do negativo;\n"
+           "D) Quadrado e raiz do numero positivo;\n");
 }
 
 void ex01() {
@@ -46,8 +47,20 @@ void ex03() {
     }
 }
 
-int main() {
+void ex04() {
+    float e;
+    printf("Informe um numero: ");
+    scanf("%f", &e);
 
+    if(e < 0) {
+        printf("Numero negativo!");
+    } else {
+        printf("Quadrado do numero: %.2f", e*e);
+        printf("\nRaiz do numero: %.2f", sqrt(e));
+    }
+}
+
+int main() {
     char x;
     menu();
     x = toupper(getchar());
@@ -61,6 +74,9 @@ int main() {
         break;
     case 'C':
         ex03();
+        break;
+    case 'D':
+        ex04();
         break;
     default:
         printf("Invalid Option!!");
