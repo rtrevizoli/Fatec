@@ -8,7 +8,8 @@ void menu() {
            "A) Valida maior, inteiro;\n"
            "B) Menor que 0 ou Raiz do Maior;\n"
            "C) Raiz do positivo ou quadrado do negativo;\n"
-           "D) Quadrado e raiz do numero positivo;\n");
+           "D) Quadrado e raiz do numero positivo;\n"
+           "E) Par o impar;\n");
 }
 
 void ex01() {
@@ -60,6 +61,17 @@ void ex04() {
     }
 }
 
+void ex05() {
+    int n;
+    printf("Informe um numero: ");
+    scanf("%d", &n);
+
+    if(n%2 == 0) {
+        printf("O numero %d e Par.", n);
+    } else {
+        printf("O numero %d e Impar.", n);
+    }
+}
 int main() {
     char x;
     menu();
@@ -77,6 +89,9 @@ int main() {
         break;
     case 'D':
         ex04();
+        break;
+    case 'E':
+        ex05();
         break;
     default:
         printf("Invalid Option!!");
