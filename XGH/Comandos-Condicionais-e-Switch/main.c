@@ -11,7 +11,8 @@ void menu() {
            "D) Quadrado e raiz do numero positivo;\n"
            "E) Par o impar;\n"
            "F) Maior e diferença;\n"
-           "G) Maior e igual;\n");
+           "G) Maior e igual;\n"
+           "H) Valida notas\n");
 }
 
 void ex01() {
@@ -101,6 +102,20 @@ void ex07() {
     }
 }
 
+void ex08() {
+    float n1, n2;
+    printf("Informe duas notas: ");
+    scanf("%f %f", &n1, &n2);
+
+    if((n1 >= 0 && n1 <= 10) && (n2 >= 0 && n2 <= 10)) {
+        printf("A media e: %.2f", (n1+n2)/2);
+    } else if((n1 < 0 || n1 > 10) && (n2 < 0 || n2 > 10)) {
+        printf("Nota 1 e nota 2 invalida.");
+    } else {
+        printf("Nota 1 ou nota 2 invalidas.");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -127,6 +142,9 @@ int main() {
         break;
     case 'G':
         ex07();
+        break;
+    case 'H':
+        ex08();
         break;
     default:
         printf("Invalid Option!!");
