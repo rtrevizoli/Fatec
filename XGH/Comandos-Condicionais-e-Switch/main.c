@@ -12,7 +12,8 @@ void menu() {
            "E) Par o impar;\n"
            "F) Maior e diferença;\n"
            "G) Maior e igual;\n"
-           "H) Valida notas\n");
+           "H) Valida notas\n"
+           "I) Consulta emprestimo;\n");
 }
 
 void ex01() {
@@ -116,6 +117,20 @@ void ex08() {
     }
 }
 
+void ex09() {
+    float s, e;
+    printf("Informe o salario: R$");
+    scanf("%f", &s);
+    printf("Informe o valor do emprestimo: R$");
+    scanf("%f", &e);
+
+    if(e > s*.2) {
+        printf("Emprestimo nao concedido.");
+    } else {
+        printf("Emprestimo concedido");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -145,6 +160,9 @@ int main() {
         break;
     case 'H':
         ex08();
+        break;
+    case 'I':
+        ex09();
         break;
     default:
         printf("Invalid Option!!");
