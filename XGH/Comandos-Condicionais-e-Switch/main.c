@@ -134,9 +134,9 @@ void ex09() {
 
 void ex10() {
     float h;
-    char s="";
+    char s;
     printf("Informe seu sexo: [M/F] ");
-    ///getchar();
+    getchar();
     s = toupper(getchar());
     printf("Informe sua altura: ");
     scanf("%f", &h);
