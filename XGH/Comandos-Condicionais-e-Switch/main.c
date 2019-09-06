@@ -13,7 +13,8 @@ void menu() {
            "F) Maior e diferença;\n"
            "G) Maior e igual;\n"
            "H) Valida notas\n"
-           "I) Consulta emprestimo;\n");
+           "I) Consulta emprestimo;\n"
+           "J) Peso ideal;\n");
 }
 
 void ex01() {
@@ -131,6 +132,22 @@ void ex09() {
     }
 }
 
+void ex10() {
+    float h;
+    char s="";
+    printf("Informe seu sexo: [M/F] ");
+    ///getchar();
+    s = toupper(getchar());
+    printf("Informe sua altura: ");
+    scanf("%f", &h);
+
+    if(s == 'M') {
+        printf("Sua altura ideal e: %.2f", (72.7*h)-58);
+    } else {
+        printf("Sua altura ideal e: %.2f", (62.1*h)-(44.7));
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -163,6 +180,9 @@ int main() {
         break;
     case 'I':
         ex09();
+        break;
+    case 'J':
+        ex10();
         break;
     default:
         printf("Invalid Option!!");
