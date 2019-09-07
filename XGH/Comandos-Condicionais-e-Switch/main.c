@@ -14,7 +14,8 @@ void menu() {
            "G) Maior e igual;\n"
            "H) Valida notas\n"
            "I) Consulta emprestimo;\n"
-           "J) Peso ideal;\n");
+           "J) Peso ideal;\n"
+           "K) Soma dos algarismos;\n");
 }
 
 void ex01() {
@@ -148,6 +149,23 @@ void ex10() {
     }
 }
 
+void ex11() {
+    int n, sum = 0;
+    printf("Informe um numero: ");
+    scanf("%d", &n);
+
+    if(n > 0) {
+        while(n > 0) {
+            sum = sum + n%10;
+            n = n/10;
+        }
+
+        printf("A soma dos algarismos e: %d", sum);
+    } else {
+        printf("Numero invalido");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -183,6 +201,9 @@ int main() {
         break;
     case 'J':
         ex10();
+        break;
+    case 'K':
+        ex11();
         break;
     default:
         printf("Invalid Option!!");
