@@ -16,7 +16,8 @@ void menu() {
            "I) Consulta emprestimo;\n"
            "J) Peso ideal;\n"
            "K) Soma dos algarismos;\n"
-           "L) Invalido negativo ou log do positivo;\n");
+           "L) Invalido negativo ou log do positivo;\n"
+           "M) Media ponderada de 3 notas;\n");
 }
 
 void ex01() {
@@ -179,6 +180,20 @@ void ex12(){
     }
 }
 
+void ex13(){
+    float n1=0, n2=0, n3=0, m=0;
+    printf("Numa escala de 0 a 100, informe as 3 notas: ");
+    scanf("%f %f %f", &n1, &n2, &n3);
+
+    m = (n1*1 + n2*1 + n3*2)/4;
+
+    if(m <= 60) {
+        printf("Aluno reprovado");
+    } else {
+        printf("Aluno aprovado");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -220,6 +235,9 @@ int main() {
         break;
     case 'L':
         ex12();
+        break;
+    case 'M':
+        ex13();
         break;
     default:
         printf("Invalid Option!!");
