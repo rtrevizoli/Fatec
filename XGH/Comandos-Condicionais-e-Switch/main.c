@@ -18,7 +18,8 @@ void menu() {
            "K) Soma dos algarismos;\n"
            "L) Invalido negativo ou log do positivo;\n"
            "M) Media ponderada de 3 notas;\n"
-           "N) Media ponderada, [R, REC, A]\n");
+           "N) Media ponderada, [R, REC, A];\n"
+           "O) Informe weekday w switch;\n");
 }
 
 void ex01() {
@@ -211,6 +212,38 @@ void ex14(){
     }
 }
 
+void ex15(){
+    int n=0;
+    printf("Informe um numero entre 1 e 7: ");
+    scanf("%d", &n);
+
+    switch(n) {
+    case 1:
+        printf("Monday");
+        break;
+    case 2:
+        printf("Thuesday");
+        break;
+    case 3:
+        printf("Wednesday");
+        break;
+    case 4:
+        printf("Thursday");
+        break;
+    case 5:
+        printf("Friday");
+        break;
+    case 6:
+        printf("Saturday");
+        break;
+    case 7:
+        printf("Sunday");
+        break;
+    default:
+        printf("Invalid option");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -258,6 +291,9 @@ int main() {
         break;
     case 'N':
         ex14();
+        break;
+    case 'O':
+        ex15();
         break;
     default:
         printf("Invalid Option!!");
