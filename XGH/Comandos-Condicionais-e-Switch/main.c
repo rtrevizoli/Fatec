@@ -15,7 +15,8 @@ void menu() {
            "H) Valida notas\n"
            "I) Consulta emprestimo;\n"
            "J) Peso ideal;\n"
-           "K) Soma dos algarismos;\n");
+           "K) Soma dos algarismos;\n"
+           "L) Invalido negativo ou log do positivo;\n");
 }
 
 void ex01() {
@@ -166,6 +167,18 @@ void ex11() {
     }
 }
 
+void ex12(){
+    float n=0;
+    printf("Informe um numero inteiro: ");
+    scanf("%f", &n);
+
+    if(n < 0) {
+        printf("Invalid number");
+    } else {
+        printf("Log de %.f e: %f", n, log(n));
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -204,6 +217,9 @@ int main() {
         break;
     case 'K':
         ex11();
+        break;
+    case 'L':
+        ex12();
         break;
     default:
         printf("Invalid Option!!");
