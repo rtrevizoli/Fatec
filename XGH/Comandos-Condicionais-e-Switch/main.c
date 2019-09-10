@@ -19,7 +19,8 @@ void menu() {
            "L) Invalido negativo ou log do positivo;\n"
            "M) Media ponderada de 3 notas;\n"
            "N) Media ponderada, [R, REC, A];\n"
-           "O) Informe weekday w switch;\n");
+           "O) Informe weekday w switch;\n"
+	   "P) Informe month w switch;\n");
 }
 
 void ex01() {
@@ -244,6 +245,53 @@ void ex15(){
     }
 }
 
+void ex16() {
+    int n=0;
+    printf("Informe um numero entre 1 e 12: ");
+    scanf("%d", &n);
+
+    switch(n) {
+    case 1:
+	printf("January");
+	break;
+    case 2:
+	printf("February");
+	break;
+    case 3:
+	printf("March");
+	break;
+    case 4:
+	printf("April");
+	break;
+    case 5:
+	printf("May");
+	break;
+    case 6:
+	printf("June");
+	break;
+    case 7:
+	printf("July");
+	break;
+    case 8:
+	printf("August");
+	break;
+    case 9:
+	printf("September");
+	break;
+    case 10:
+	printf("October");
+	break;
+    case 11:
+	printf("November");
+	break;
+    case 12:
+	printf("Dezember");
+	break;
+    default:
+	printf("Invalid Oprtion");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -295,6 +343,9 @@ int main() {
     case 'O':
         ex15();
         break;
+    case 'P':
+	ex16();
+	break;
     default:
         printf("Invalid Option!!");
     }
