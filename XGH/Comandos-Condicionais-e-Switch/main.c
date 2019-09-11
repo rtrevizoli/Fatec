@@ -23,7 +23,8 @@ void menu() {
            "P) Informe month w switch;\n"
            "Q) Area do trapezio;\n"
            "R) Operacoes matematicas;\n"
-           "S) Divisao por 3 e 5;\n");
+           "S) Divisao por 3 e 5;\n"
+           "T) De 3 lados, defina o triangulo;\n");
 }
 
 void ex01() {
@@ -366,6 +367,23 @@ void ex19() {
     }
 }
 
+void ex20() {
+    float l1=0, l2=0, l3=0;
+
+    printf("Informe 3 medidas: ");
+    scanf("%f %f %f", &l1, &l2, &l3);
+
+    if(l1 > l2+l3 || l2 > l1+l3 || l3 > l1+l2) {
+        printf("As medidas informadas nao formam um triangulo.");
+    } else if(l1 == l2 && l2 == l3) {
+        printf("Triangulo Equilatero.");
+    } else if(l1 != l2 && l2 != l3) {
+        printf("Triangulo Escaleno.");
+    } else {
+        printf("Triangulo Isosceles.");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -428,6 +446,9 @@ int main() {
         break;
     case 'S':
         ex19();
+        break;
+    case 'T':
+        ex20();
         break;
     default:
         printf("Invalid Option!!");
