@@ -20,7 +20,8 @@ void menu() {
            "M) Media ponderada de 3 notas;\n"
            "N) Media ponderada, [R, REC, A];\n"
            "O) Informe weekday w switch;\n"
-	   "P) Informe month w switch;\n");
+           "P) Informe month w switch;\n"
+           "Q) Area do trapezio;\n");
 }
 
 void ex01() {
@@ -252,44 +253,65 @@ void ex16() {
 
     switch(n) {
     case 1:
-	printf("January");
-	break;
+        printf("January");
+        break;
     case 2:
-	printf("February");
-	break;
+        printf("February");
+        break;
     case 3:
-	printf("March");
-	break;
+        printf("March");
+        break;
     case 4:
-	printf("April");
-	break;
+        printf("April");
+        break;
     case 5:
-	printf("May");
-	break;
+        printf("May");
+        break;
     case 6:
-	printf("June");
-	break;
+        printf("June");
+        break;
     case 7:
-	printf("July");
-	break;
+        printf("July");
+        break;
     case 8:
-	printf("August");
-	break;
+        printf("August");
+        break;
     case 9:
-	printf("September");
-	break;
+        printf("September");
+        break;
     case 10:
-	printf("October");
-	break;
+        printf("October");
+        break;
     case 11:
-	printf("November");
-	break;
+        printf("November");
+        break;
     case 12:
-	printf("Dezember");
-	break;
+        printf("Dezember");
+        break;
     default:
-	printf("Invalid Oprtion");
+        printf("Invalid Oprtion");
     }
+}
+
+void ex17(){
+    float bM=0, bm=0, A=0, h=0;
+
+    while(bm <= 0){
+        printf("Informe a base menor: ");
+        scanf("%f", &bm);
+    }
+
+    while(bM <= 0){
+        printf("Informe a base maior: ");
+        scanf("%f", &bM);
+    }
+
+    while(h <= 0){
+        printf("Informe a altura: ");
+        scanf("%f", &h);
+    }
+
+    printf("A area do trapezio e: %.2f", ((bm+bM)*h)/2);
 }
 
 int main() {
@@ -344,8 +366,11 @@ int main() {
         ex15();
         break;
     case 'P':
-	ex16();
-	break;
+        ex16();
+        break;
+    case 'Q':
+        ex17();
+        break;
     default:
         printf("Invalid Option!!");
     }
