@@ -21,7 +21,8 @@ void menu() {
            "N) Media ponderada, [R, REC, A];\n"
            "O) Informe weekday w switch;\n"
            "P) Informe month w switch;\n"
-           "Q) Area do trapezio;\n");
+           "Q) Area do trapezio;\n"
+           "R) Operacoes matematicas;\n");
 }
 
 void ex01() {
@@ -314,6 +315,39 @@ void ex17(){
     printf("A area do trapezio e: %.2f", ((bm+bM)*h)/2);
 }
 
+void ex18() {
+    int x=0;
+    float n1=0, n2=0;
+
+    printf("Informe dois numeros: ");
+    scanf("%f %f", &n1, &n2);
+
+    printf("--Escolha uma Operacao--\n"
+           "1) Adicao +;\n"
+           "2) Subtracao -;\n"
+           "3) Multiplicacao *;\n"
+           "4) Divisao /;\n");
+
+    scanf("%d", &x);
+
+    switch(x) {
+    case 1:
+        printf("%.f + %.f = %.f", n1, n2, n1+n2);
+        break;
+    case 2:
+        printf("%.f - %.f = %.f", n1, n2, n1-n2);
+        break;
+    case 3:
+        printf("%.2f * %.2f = %.2f", n1, n2, n1*n2);
+        break;
+    case 4:
+        printf("%.2f / %.2f = %.2f", n1, n2, n1/n2);
+        break;
+    default:
+        printf("Invalid Option");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -370,6 +404,9 @@ int main() {
         break;
     case 'Q':
         ex17();
+        break;
+    case 'R':
+        ex18();
         break;
     default:
         printf("Invalid Option!!");
