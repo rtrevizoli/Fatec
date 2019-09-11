@@ -27,7 +27,8 @@ void menu() {
            "T) De 3 lados, defina o triangulo;\n"
            "U) Menu operacoes aritimeticas;\n"
            "V) Posso aposentar ?;\n"
-           "W) Ano bissexto;\n");
+           "W) Ano bissexto;\n"
+           "X) Taxa por estado;\n");
 }
 
 void ex01() {
@@ -456,6 +457,38 @@ void ex23() {
     }
 }
 
+void ex24() {
+    int x=0;
+    float vp=0;
+
+    printf("Informe o valor do produto: R$");
+    scanf("%f", &vp);
+
+    printf("--Escolha um estado abaixo--\n"
+          "1) MG;\n"
+          "2) MS;\n"
+          "3) RJ;\n"
+          "4) SP.\n");
+    scanf("%d", &x);
+
+    switch(x) {
+    case 1:
+        printf("O preco do produto e R$%.2f", vp*1.07);
+        break;
+    case 2:
+        printf("O preco do produto e R$%.2f", vp*1.08);
+        break;
+    case 3:
+        printf("O preco do produto e R$%.2f", vp*1.15);
+        break;
+    case 4:
+        printf("O preco do produto e R$%.2f", vp*1.12);
+        break;
+    default:
+        printf("Invalid Option");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -530,6 +563,9 @@ int main() {
         break;
     case 'W':
         ex23();
+        break;
+    case 'X':
+        ex24();
         break;
     default:
         printf("Invalid Option!!");
