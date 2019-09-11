@@ -25,7 +25,8 @@ void menu() {
            "R) Operacoes matematicas;\n"
            "S) Divisao por 3 e 5;\n"
            "T) De 3 lados, defina o triangulo;\n"
-           "U) Menu operacoes aritimeticas;\n");
+           "U) Menu operacoes aritimeticas;\n"
+           "V) Posso aposentar ?\n");
 }
 
 void ex01() {
@@ -395,7 +396,7 @@ void ex21() {
            "1) Soma de 2 numeros;\n"
            "2) Diferenca entre 2 numeros (maior pelo menor);\n"
            "3) Produto entre dois numeros;\n"
-           "4) Divisao entre dois numeros (o denominador nao pode ser zero).");
+           "4) Divisao entre dois numeros (o denominador nao pode ser zero).\n");
     scanf("%d", &x);
 
     float maior=n1, menor=n2;
@@ -425,6 +426,19 @@ void ex21() {
         break;
     default:
         printf("Invalid Option");
+    }
+}
+
+void ex22() {
+    int i=0, ts=0;
+
+    printf("Informe sua idade e seu tempo de servico respectivamente e em anos: ");
+    scanf("%d %d", &i, &ts);
+
+    if(i >= 65 || ts >= 30 || (i >= 60 && ts >= 25)){
+        printf("Parabens, voce pode se aposentar!");
+    } else {
+        printf("Infelizmente informo que voce ainda nao pode se aposentar. :c");
     }
 }
 
@@ -496,6 +510,9 @@ int main() {
         break;
     case 'U':
         ex21();
+        break;
+    case 'V':
+        ex22();
         break;
     default:
         printf("Invalid Option!!");
