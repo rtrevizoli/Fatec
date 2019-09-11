@@ -26,7 +26,8 @@ void menu() {
            "S) Divisao por 3 e 5;\n"
            "T) De 3 lados, defina o triangulo;\n"
            "U) Menu operacoes aritimeticas;\n"
-           "V) Posso aposentar ?\n");
+           "V) Posso aposentar ?;\n"
+           "W) Ano bissexto;\n");
 }
 
 void ex01() {
@@ -442,6 +443,19 @@ void ex22() {
     }
 }
 
+void ex23() {
+    int y=0;
+
+    printf("Informe um ano: ");
+    scanf("%d", &y);
+
+    if(y%400 == 0 || (y%4 == 0 && y%100 != 0)) {
+        printf("O ano %d e bissexto.", y);
+    } else {
+        printf("O ano %d nao e bissexto.", y);
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -513,6 +527,9 @@ int main() {
         break;
     case 'V':
         ex22();
+        break;
+    case 'W':
+        ex23();
         break;
     default:
         printf("Invalid Option!!");
