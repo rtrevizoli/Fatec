@@ -22,7 +22,8 @@ void menu() {
            "O) Informe weekday w switch;\n"
            "P) Informe month w switch;\n"
            "Q) Area do trapezio;\n"
-           "R) Operacoes matematicas;\n");
+           "R) Operacoes matematicas;\n"
+           "S) Divisao por 3 e 5;\n");
 }
 
 void ex01() {
@@ -348,6 +349,23 @@ void ex18() {
     }
 }
 
+void ex19() {
+    float n=0;
+
+    printf("Informe um numero: ");
+    scanf("%f", &n);
+
+    if(fmod(n, 3) == 0 && fmod(n, 5) == 0){
+        printf("Este numero e divisivel por 3 e por 5.");
+    } else if(fmod(n, 3) == 0){
+        printf("Este numero e divisivel por 3.");
+    } else if(fmod(n, 5) == 0){
+        printf("Este numero e divisivel por 5.");
+    } else {
+        printf("Este numero nao e divisivel por 3, nem por 5.");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -407,6 +425,9 @@ int main() {
         break;
     case 'R':
         ex18();
+        break;
+    case 'S':
+        ex19();
         break;
     default:
         printf("Invalid Option!!");
