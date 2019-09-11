@@ -24,7 +24,8 @@ void menu() {
            "Q) Area do trapezio;\n"
            "R) Operacoes matematicas;\n"
            "S) Divisao por 3 e 5;\n"
-           "T) De 3 lados, defina o triangulo;\n");
+           "T) De 3 lados, defina o triangulo;\n"
+           "U) Menu operacoes aritimeticas;\n");
 }
 
 void ex01() {
@@ -384,6 +385,49 @@ void ex20() {
     }
 }
 
+void ex21() {
+    int x=0;
+    float n1=0, n2=0;
+    printf("Informe dois numeros: ");
+    scanf("%f %f", &n1, &n2);
+
+    printf("--Selecione uma operacao--\n"
+           "1) Soma de 2 numeros;\n"
+           "2) Diferenca entre 2 numeros (maior pelo menor);\n"
+           "3) Produto entre dois numeros;\n"
+           "4) Divisao entre dois numeros (o denominador nao pode ser zero).");
+    scanf("%d", &x);
+
+    float maior=n1, menor=n2;
+
+    if(n1 < n2) {
+        maior = n2;
+        menor = n1;
+    }
+
+    switch(x) {
+    case 1:
+        printf("%.f + %.f = %.f", n1, n2, n1+n2);
+        break;
+    case 2:
+        printf("%.f - %.f = %.f", maior, menor, maior-menor);
+        break;
+    case 3:
+        printf("%.f * %.f = %.f", n1, n2, n1*n2);
+        break;
+    case 4:
+        while(n2 == 0){
+            printf("Por favor, informe um numero diferente de zero para o denominador: ");
+            scanf("%f", &n2);
+        }
+
+        printf("%.f / %.f = %.2f", n1, n2, n1/n2);
+        break;
+    default:
+        printf("Invalid Option");
+    }
+}
+
 int main() {
     char x;
     menu();
@@ -449,6 +493,9 @@ int main() {
         break;
     case 'T':
         ex20();
+        break;
+    case 'U':
+        ex21();
         break;
     default:
         printf("Invalid Option!!");
