@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <math.h>
+#include <time.h>
 
 void menu() {
     printf("--Options Menu--\n"
@@ -32,7 +33,8 @@ void menu() {
            "25) Raizes da funcao de segundo grau;\n"
            "26) Consumo da gasolina;\n"
            "27) Cat nadador;\n"
-           "28) Medias por 3 ints;\n");
+           "28) Medias por 3 ints;\n"
+           "29) Prova de matematica;\n");
 }
 
 void ex01() {
@@ -590,8 +592,30 @@ void ex28() {
     default:
         printf("Invalid Option!");
     }
+}
 
+void ex29() {
+    int ca=0, a=0, b=0, r=0;
 
+    printf("--Provinha de Matematica--\n");
+
+    srand(time(0));
+
+    for(int i = 0; i < 5; i++) {
+        a = rand() % 100;
+        b = rand() % 100;
+
+        printf("Qual e a resposta para %d + %d = ", a, b);
+        scanf("%d", &r);
+
+        if(r == a+b) {
+            ca += 1;
+            printf("A resposta esta certa! Parabens!\n");
+        } else {
+            printf("Aaah, que pena, a resposta era: %d, tente de novo na proxima :D\n", a+b);
+        }
+    }
+    printf("Voce fez %d acertos.", ca);
 }
 
 int main() {
@@ -683,6 +707,9 @@ int main() {
         break;
     case 28:
         ex28();
+        break;
+    case 29:
+        ex29();
         break;
     default:
         printf("Invalid Option!!");
