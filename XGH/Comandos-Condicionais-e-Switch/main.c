@@ -5,32 +5,32 @@
 
 void menu() {
     printf("--Options Menu--\n"
-           "A) Valida maior, inteiro;\n"
-           "B) Menor que 0 ou Raiz do Maior;\n"
-           "C) Raiz do positivo ou quadrado do negativo;\n"
-           "D) Quadrado e raiz do numero positivo;\n"
-           "E) Par o impar;\n"
-           "F) Maior e diferença;\n"
-           "G) Maior e igual;\n"
-           "H) Valida notas\n"
-           "I) Consulta emprestimo;\n"
-           "J) Peso ideal;\n"
-           "K) Soma dos algarismos;\n"
-           "L) Invalido negativo ou log do positivo;\n"
-           "M) Media ponderada de 3 notas;\n"
-           "N) Media ponderada, [R, REC, A];\n"
-           "O) Informe weekday w switch;\n"
-           "P) Informe month w switch;\n"
-           "Q) Area do trapezio;\n"
-           "R) Operacoes matematicas;\n"
-           "S) Divisao por 3 e 5;\n"
-           "T) De 3 lados, defina o triangulo;\n"
-           "U) Menu operacoes aritimeticas;\n"
-           "V) Posso aposentar ?;\n"
-           "W) Ano bissexto;\n"
-           "X) Taxa por estado;\n"
-           "Y) Raizes da funcao de segundo grau;\n"
-           "Z) Consumo da gasolina;\n");
+           "1) Valida maior, inteiro;\n"
+           "2) Menor que 0 ou Raiz do Maior;\n"
+           "3) Raiz do positivo ou quadrado do negativo;\n"
+           "4) Quadrado e raiz do numero positivo;\n"
+           "5) Par o impar;\n"
+           "6) Maior e diferença;\n"
+           "7) Maior e igual;\n"
+           "8) Valida notas\n"
+           "9) Consulta emprestimo;\n"
+           "10) Peso ideal;\n"
+           "11) Soma dos algarismos;\n"
+           "12) Invalido negativo ou log do positivo;\n"
+           "13) Media ponderada de 3 notas;\n"
+           "14) Media ponderada, [R, REC, A];\n"
+           "15) Informe weekday w switch;\n"
+           "16) Informe month w switch;\n"
+           "17) Area do trapezio;\n"
+           "18) Operacoes matematicas;\n"
+           "19) Divisao por 3 e 5;\n"
+           "20) De 3 lados, defina o triangulo;\n"
+           "21) Menu operacoes aritimeticas;\n"
+           "22) Posso aposentar ?;\n"
+           "23) Ano bissexto;\n"
+           "24) Taxa por estado;\n"
+           "25) Raizes da funcao de segundo grau;\n"
+           "26) Consumo da gasolina;\n");
 }
 
 void ex01() {
@@ -539,87 +539,87 @@ void ex26() {
 }
 
 int main() {
-    char x;
+    int x;
     menu();
-    x = toupper(getchar());
+    scanf("%d", &x);
 
     switch(x) {
-    case 'A':
+    case 1:
         ex01();
         break;
-    case 'B':
+    case 2:
         ex02();
         break;
-    case 'C':
+    case 3:
         ex03();
         break;
-    case 'D':
+    case 4:
         ex04();
         break;
-    case 'E':
+    case 5:
         ex05();
         break;
-    case 'F':
+    case 6:
         ex06();
         break;
-    case 'G':
+    case 7:
         ex07();
         break;
-    case 'H':
+    case 8:
         ex08();
         break;
-    case 'I':
+    case 9:
         ex09();
         break;
-    case 'J':
+    case 10:
         ex10();
         break;
-    case 'K':
+    case 11:
         ex11();
         break;
-    case 'L':
+    case 12:
         ex12();
         break;
-    case 'M':
+    case 13:
         ex13();
         break;
-    case 'N':
+    case 14:
         ex14();
         break;
-    case 'O':
+    case 15:
         ex15();
         break;
-    case 'P':
+    case 16:
         ex16();
         break;
-    case 'Q':
+    case 17:
         ex17();
         break;
-    case 'R':
+    case 18:
         ex18();
         break;
-    case 'S':
+    case 19:
         ex19();
         break;
-    case 'T':
+    case 20:
         ex20();
         break;
-    case 'U':
+    case 21:
         ex21();
         break;
-    case 'V':
+    case 22:
         ex22();
         break;
-    case 'W':
+    case 23:
         ex23();
         break;
-    case 'X':
+    case 24:
         ex24();
         break;
-    case 'Y':
+    case 25:
         ex25();
         break;
-    case 'Z':
+    case 26:
         ex26();
         break;
     default:
