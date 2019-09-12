@@ -29,7 +29,8 @@ void menu() {
            "V) Posso aposentar ?;\n"
            "W) Ano bissexto;\n"
            "X) Taxa por estado;\n"
-           "Y) Raizes da funcao de segundo grau;\n");
+           "Y) Raizes da funcao de segundo grau;\n"
+           "Z) Consumo da gasolina;\n");
 }
 
 void ex01() {
@@ -514,6 +515,26 @@ void ex25() {
         printf("xi: %.2f\n"
                "xii: %.2f", (-b+sqrt(D))/(2*a), (-b-sqrt(D))/(2*a));
      }
+}
+
+void ex26() {
+    float km=0, l=0, kmpl=0;
+
+    printf("Informe a Quilometragem percorrida pelo carro: ");
+    scanf("%f", &km);
+
+    printf("Informe a quantidade de litros utilizada pelo carro: ");
+    scanf("%f", &l);
+
+    kmpl = km/l;
+
+    if(kmpl < 8) {
+        printf("Venda o carro!");
+    } else if(kmpl >= 8 && kmpl <= 14) {
+        printf("Economico.");
+    } else {
+        printf("Super Economico!");
+    }
 
 }
 
@@ -597,6 +618,9 @@ int main() {
         break;
     case 'Y':
         ex25();
+        break;
+    case 'Z':
+        ex26();
         break;
     default:
         printf("Invalid Option!!");
