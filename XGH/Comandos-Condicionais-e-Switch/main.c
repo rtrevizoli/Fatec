@@ -181,7 +181,7 @@ void ex11() {
     }
 }
 
-void ex12(){
+void ex12() {
     float n=0;
     printf("Informe um numero inteiro: ");
     scanf("%f", &n);
