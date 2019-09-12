@@ -31,7 +31,8 @@ void menu() {
            "24) Taxa por estado;\n"
            "25) Raizes da funcao de segundo grau;\n"
            "26) Consumo da gasolina;\n"
-           "27) Cat nadador;\n");
+           "27) Cat nadador;\n"
+           "28) Medias por 3 ints;\n");
 }
 
 void ex01() {
@@ -559,6 +560,40 @@ void ex27() {
     }
 }
 
+void ex28() {
+    float x=0, y=0, z=0;
+    int a=0;
+
+    printf("Informe 3 numeros inteiros positivos: ");
+    scanf("%f %f %f", &x, &y, &z);
+
+    printf("--Option Menu--\n"
+           "1) Media Geometrica -> (x*y*z)**(1/3);\n"
+           "2) Media Ponderada -> (x+2*y+3*z)/6;\n"
+           "3) Media Harmonica -> 1/(1/x+1/y+1/z);\n"
+           "4) Media Aritimetica -> (x+y+z)/3.\n");
+    scanf("%d", &a);
+
+    switch(a) {
+    case 1:
+        printf("Media Geometrica: %.f", pow(x*y*z, 1/3));
+        break;
+    case 2:
+        printf("Media Ponderada: %.f", (x+(2*y)+(3*z))/6);
+        break;
+    case 3:
+        printf("Media Hamonica: %.f", 1/(1/x+1/y+1/z));
+        break;
+    case 4:
+        printf("Media Aritimetica: %.f", (x+y+z)/3);
+        break;
+    default:
+        printf("Invalid Option!");
+    }
+
+
+}
+
 int main() {
     int x;
     menu();
@@ -645,6 +680,9 @@ int main() {
         break;
     case 27:
         ex27();
+        break;
+    case 28:
+        ex28();
         break;
     default:
         printf("Invalid Option!!");
