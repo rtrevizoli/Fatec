@@ -30,7 +30,8 @@ void menu() {
            "23) Ano bissexto;\n"
            "24) Taxa por estado;\n"
            "25) Raizes da funcao de segundo grau;\n"
-           "26) Consumo da gasolina;\n");
+           "26) Consumo da gasolina;\n"
+           "27) Cat nadador;\n");
 }
 
 void ex01() {
@@ -535,7 +536,27 @@ void ex26() {
     } else {
         printf("Super Economico!");
     }
+}
 
+void ex27() {
+    int i=0;
+
+    while(i < 5) {
+        printf("Informe uma idade maior ou igual a 5 anos: ");
+        scanf("%d", &i);
+    }
+
+    if(i >= 5 && i <= 7) {
+        printf("Infantil A");
+    } else if(i >= 8 && i <= 10) {
+        printf("Infantil B");
+    } else if(i >= 11 && i <= 13) {
+        printf("Juvenil A");
+    } else if(i >= 14 && i <= 17) {
+        printf("Juvenil B");
+    } else {
+        printf("Senior");
+    }
 }
 
 int main() {
@@ -621,6 +642,9 @@ int main() {
         break;
     case 26:
         ex26();
+        break;
+    case 27:
+        ex27();
         break;
     default:
         printf("Invalid Option!!");
