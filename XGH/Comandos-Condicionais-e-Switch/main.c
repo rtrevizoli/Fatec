@@ -28,7 +28,8 @@ void menu() {
            "U) Menu operacoes aritimeticas;\n"
            "V) Posso aposentar ?;\n"
            "W) Ano bissexto;\n"
-           "X) Taxa por estado;\n");
+           "X) Taxa por estado;\n"
+           "Y) Raizes da funcao de segundo grau;\n");
 }
 
 void ex01() {
@@ -489,6 +490,33 @@ void ex24() {
     }
 }
 
+void ex25() {
+    float a=0, b=0, c=0, D=0;
+
+     while(a == 0) {
+        printf("Informe o a, diferente de zero: ");
+        scanf("%f", &a);
+     }
+
+     printf("Informe b: ");
+     scanf("%f", &b);
+
+     printf("Informe c: ");
+     scanf("%f", &c);
+
+     D = b*b-(4*a*c);
+
+     if(D < 0) {
+        printf("Nao existe raizes para a equacao.");
+     } else if(D == 0) {
+         printf("x: %.2f", (-b/(2*a)));
+     } else {
+        printf("xi: %.2f\n"
+               "xii: %.2f", (-b+sqrt(D))/(2*a), (-b-sqrt(D))/(2*a));
+     }
+
+}
+
 int main() {
     char x;
     menu();
@@ -566,6 +594,9 @@ int main() {
         break;
     case 'X':
         ex24();
+        break;
+    case 'Y':
+        ex25();
         break;
     default:
         printf("Invalid Option!!");
