@@ -17,6 +17,8 @@ int main() {
         char str[50];
     } COMPROMISSO;
 
-    system("read x");
+    //system("read x");
+    scanf("kkk\n");
+
     return 0;
 }
