@@ -17,6 +17,6 @@ int main() {
         char str[50];
     } COMPROMISSO;
 
-    system("PAUSE");
+    system("read x");
     return 0;
 }
