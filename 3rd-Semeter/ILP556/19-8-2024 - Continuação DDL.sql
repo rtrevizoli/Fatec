@@ -1,4 +1,6 @@
---https://dontpad.com/pbdddl
+-- 16-8-2024 - Instalação MYSQL (https://drive.google.com/drive/folders/1uK5tIiGBp4qL0AKxYVxN9N0w67neLMtB?usp=drive_link)
+-- 16-8-2024 - DDL (https://drive.google.com/drive/folders/1602oURZa8XernVEJPP0XeLYHqjbac5ak?usp=drive_link)
+-- https://dontpad.com/pbdddl
 
 create database IF NOT EXISTS venda;
 use venda;
