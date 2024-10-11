@@ -1,0 +1,15 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+#<id-da-tarefa> [Escopo]: Título da Tarefa
+#
+#Descrição da Implementação
+# - Fiz tal coisa desse jeito
+#
+#Sugestões para Melhorias Futuras
+# - Melhorar isso assim
+# - Melhorar aquilo assado
+#
+# Changes to be committed:
+#	new file:   "3rd-Semester/ILP556/Pratica/Pr\303\241tica4/PR\303\201TICA04-DDD-Alter_Table.doc"
