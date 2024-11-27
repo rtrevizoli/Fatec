@@ -1,0 +1,6 @@
+edu\fatec\lp2\Model\ListaCompra.class
+edu\fatec\lp2\Model\Supermercado.class
+edu\fatec\lp2\Service\Calculavel.class
+edu\fatec\lp2\Model\Produto.class
+edu\fatec\lp2\App.class
+edu\fatec\lp2\Model\ItemCompra.class

@@ -1,0 +1,7 @@
+edu\fatec\lp2\Model\MsgTexto.class
+edu\fatec\lp2\Model\MsgAudio.class
+edu\fatec\lp2\Model\MsgFoto.class
+edu\fatec\lp2\Model\Mensagem.class
+edu\fatec\lp2\Service\Whatsapp.class
+edu\fatec\lp2\Model\Contatinho.class
+edu\fatec\lp2\App.class
