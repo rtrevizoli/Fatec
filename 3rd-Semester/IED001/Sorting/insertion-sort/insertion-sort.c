@@ -16,9 +16,9 @@ void printVec(int v[], int v_size)
    printf(" };\n");
 }
 
-void insertionsort (int n, int v[])
+void insertionsort (int v[], int v_size)
 {
-   for (int j = 1; j < n; ++j)
+   for (int j = 1; j < v_size; ++j)
    {
       printf("J: v[%d] = %d\n", j, v[j]);
 
@@ -32,8 +32,6 @@ void insertionsort (int n, int v[])
       }
       v[i+1] = x;
    }
-
-   printVec(v, n);
 }
 
 int main()
@@ -41,7 +39,11 @@ int main()
    int v[] = { 4, 7, 124, 8, 12 };
    int v_size = sizeof(v)/sizeof(v[0]);
 
-   insertionsort(v_size, v);
+   printVec(v, v_size);
+
+   insertionsort(v, v_size);
+
+   printVec(v, v_size);
 
    return 0;
 }
