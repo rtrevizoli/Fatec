@@ -16,7 +16,7 @@ void printVec(int v[], int v_size)
    printf(" };\n");
 }
 
-void rtx_insertionSort(int v[], int v_size)
+void insertionSort(int v[], int v_size)
 {
    int aux = 0;
 
@@ -38,7 +38,7 @@ void rtx_insertionSort(int v[], int v_size)
    }
 }
 
-void insertionSort (int v[], int v_size)
+void optimizedInsertionSort (int v[], int v_size)
 {
    for (int j = 1; j < v_size; ++j)
    {
@@ -70,8 +70,8 @@ int main()
 
    printVec(v, v_size);
 
-   // insertionSort(v, v_size);
-   rtx_insertionSort(v, v_size);
+   // optimizedInsertionSort(v, v_size);
+   insertionSort(v, v_size);
 
    printVec(v, v_size);
 
