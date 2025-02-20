@@ -18,21 +18,19 @@ void printVec(int v[], int v_size)
 
 void insertionSort(int v[], int v_size)
 {
-   int aux = 0;
-
    for (int i = 0; i < v_size; i++)
    {
       int selected_element = v[i];
 
       for (int j = i; j >= 0; j--)
       {
-         // printf("selected_element < v[j] ? => %d < v[%d] => %d < %d\n", selected_element, j, selected_element, v[j]);
+         printf("selected_element < v[j] ? => %d < v[%d] => %d < %d\n", selected_element, j, selected_element, v[j]);
 
          if (selected_element < v[j])
          {
             v[j+1] = v[j];
             v[j] = selected_element;
-            // printVec(v, v_size);
+            printVec(v, v_size);
          } 
       }
    }
@@ -61,10 +59,10 @@ void optimizedInsertionSort (int v[], int v_size)
 int main()
 {
    // int v[] = { 1, 3, 7, 15 }; // Best case input
-   // int v[] = { 7, 15, 3, 1 }; // Normal case input
+   int v[] = { 7, 15, 3, 1 }; // Normal case input
    // int v[] = { 15, 7, 3, 1 }; // Worst case input
 
-   int v[] = {9, 78, -2, 435, 10, 11, 88, 56489302, -54893, 10, 9, 234, 74, 74};
+   // int v[] = {9, 78, -2, 435, 10, 11, 88, 56489302, -54893, 10, 9, 234, 74, 74};
 
    int v_size = sizeof(v)/sizeof(v[0]);
 
