@@ -8,23 +8,28 @@ typedef struct TreeNode
     struct TreeNode *right;
 } Node;
 
-void addNode(Node **node, int value)
+Node * addNode(Node *node, int value)
 {
-    if (*node == NULL)
+    if (node == NULL)
     {
-        *node = (Node *)malloc(sizeof(Node));
-        (*node)->val = value;
-        (*node)->left = NULL;
-        (*node)->right = NULL;
+        node = (Node *)malloc(sizeof(Node));
+        node->val = value;
+        node->left = NULL;
+        node->right = NULL;
+
+        return node;
     }
-    else if (value < (*node)->val)
+
+    if (value < node->val)
     {
-        addNode(&((*node)->left), value);
+        node->left = addNode(node->left, value);
     }
     else
     {
-        addNode(&((*node)->right), value);
+        node->right = addNode(node->right, value);
     }
+
+    return node;
 }
 
 // In the preorder traversal,
@@ -76,11 +81,11 @@ int main()
 {
     Node *bst = NULL;
 
-    addNode(&bst, 5);
-    addNode(&bst, 3);
-    addNode(&bst, 7);
-    addNode(&bst, 2);
-    addNode(&bst, 4);
+    bst = addNode(bst, 5);
+    bst = addNode(bst, 3);
+    bst = addNode(bst, 7);
+    bst = addNode(bst, 2);
+    bst = addNode(bst, 4);
 
     printf("Preorder traversal: ");
     preorderTraversal(bst);
@@ -94,25 +99,25 @@ int main()
     postorderTraversal(bst);
     printf("\n");
 
-    Node *tree = NULL;
+    // Node *tree = NULL;
 
-    addNodeWithoutOrder(&tree, 5);
-    addNodeWithoutOrder(&tree, 3);
-    addNodeWithoutOrder(&tree, 7);
-    addNodeWithoutOrder(&tree, 2);
-    addNodeWithoutOrder(&tree, 4);
+    // addNodeWithoutOrder(&tree, 5);
+    // addNodeWithoutOrder(&tree, 3);
+    // addNodeWithoutOrder(&tree, 7);
+    // addNodeWithoutOrder(&tree, 2);
+    // addNodeWithoutOrder(&tree, 4);
 
-    printf("Preorder traversal: ");
-    preorderTraversal(tree);
-    printf("\n=================================\n");
+    // printf("Preorder traversal: ");
+    // preorderTraversal(tree);
+    // printf("\n=================================\n");
 
-    printf("Inorder traversal: ");
-    inorderTraversal(tree);
-    printf("\n=================================\n");
+    // printf("Inorder traversal: ");
+    // inorderTraversal(tree);
+    // printf("\n=================================\n");
 
-    printf("Postorder traversal: ");
-    postorderTraversal(tree);
-    printf("\n");
+    // printf("Postorder traversal: ");
+    // postorderTraversal(tree);
+    // printf("\n");
 
     return 0;
 }
